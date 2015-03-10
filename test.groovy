@@ -16,7 +16,7 @@ lib.MODULEOPTS = "--env MODULE=${lib.MODULE} " +
         "--env \"${lib.MODULE.toUpperCase()}_ZK_IP=${-> lib.IPS['ZKIP']}\" "
 
 lib.ATSERVICES = [lib.ZKIMG,
-                  lib.KAFKAIMG,
+//                  lib.KAFKAIMG,
                   ['MODULEIP', 'st-engine:0.7.0-SNAPSHOT', "${-> lib.MODULEOPTS}"]
 ]
 
