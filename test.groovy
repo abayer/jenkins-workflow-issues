@@ -17,7 +17,7 @@ lib.MODULEOPTS = "--env MODULE=${lib.MODULE} " +
 
 lib.ATSERVICES = [lib.ZKIMG,
 //                  lib.KAFKAIMG,
-                  ['MODULEIP', 'st-engine:0.7.0-SNAPSHOT', "${-> lib.MODULEOPTS}"]
+                  ['MODULEIP', 'st-engine:0.7.0-SNAPSHOT', 1, "${-> lib.MODULEOPTS}"]
 ]
 
 node ('master') {
