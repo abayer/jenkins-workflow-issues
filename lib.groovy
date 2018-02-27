@@ -16,9 +16,9 @@ import groovy.transform.Field
 def startServices(SERVICES) {
     for (int i = 0; i < SERVICES.size(); i++) {
         IMG = SERVICES[i][1]
-        ADDITIONALPARAM = SERVICES[i][3]        
-      sh "echo 'pants' && echo ${i} > IP"
-//        sh "echo ${MODULE} ${IMG} '${ADDITIONALPARAM}' && echo ${i} > IP"
+        ADDITIONALPARAM = SERVICES[i][3]       
+      echo "additional param: ${ADDITIONALPARAM.class}"
+        sh "echo ${MODULE} ${IMG} '${ADDITIONALPARAM}' && echo ${i} > IP"
 
         IPS[SERVICES[i][0]] = readFile('IP').trim()
     }
