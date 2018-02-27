@@ -17,7 +17,7 @@ def startServices(SERVICES) {
     for (int i = 0; i < SERVICES.size(); i++) {
         IMG = SERVICES[i][1]
         ADDITIONALPARAM = SERVICES[i][3]        
-      sh "echo ${IMG} '${ADDITIONALPARAM}' && echo ${i} > IP"
+      sh "echo '${ADDITIONALPARAM}' && echo ${i} > IP"
 //        sh "echo ${MODULE} ${IMG} '${ADDITIONALPARAM}' && echo ${i} > IP"
 
         IPS[SERVICES[i][0]] = readFile('IP').trim()
